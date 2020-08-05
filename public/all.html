@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Data Retrival App</h1>
+    <a href="all.html">ShowAll</a> |
+    <a href="index.html">Home</a>
+    <script>
+        getData();
+        async function getData()
+        {
+            const resp = await fetch('/api');
+            const data = await resp.json();
+            console.log(data);
+            for (item of data){
+                const root=document.createElement('p');
+                const mood=document.createElement('div');
+                mood.textContent = 'mood : '+item.mood; 
+                const geo =document.createElement('div');
+                geo.textContent   = item.lat+' , '+item.lon;
+                const date=document.createElement('div');
+                const dateString = new Date(item.timeStamp).toLocaleString();
+                date.textContent = dateString;
+                // const image =document.createElement('img');
+                // image.src=item.image64;
+
+                root.append(mood,geo,date);
+                document.body.append(root);
+            }
+        }
+    </script>
+</body>
+</html>
