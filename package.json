@@ -1,0 +1,24 @@
+{
+  "name": "weatherapi",
+  "version": "1.0.0",
+  "description": "' testing app'",
+  "main": "first.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saikrishnassk/Websites2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saikrishnassk/Websites2020/issues"
+  },
+  "homepage": "https://github.com/saikrishnassk/Websites2020#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "node-fetch": "^2.6.0"
+  }
+}
